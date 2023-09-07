@@ -1,5 +1,5 @@
 public class Sorter {
-    void selectionSort(int arr[]) {
+    private static void selectionSort(int arr[]) {
         int n = arr.length;
 
         // One by one move boundary of unsorted subarray
@@ -19,7 +19,7 @@ public class Sorter {
         }
     }
 
-    private static void  insertionSort(int arr[]){
+    private static void insertionSort(int arr[]) {
         for (int i = 1; i < arr.length; ++i) {
             int key = arr[i];
             int j = i - 1;
@@ -32,11 +32,18 @@ public class Sorter {
         }
     }
 
-    private static void sort (int arr[]){
+    private static void sort(int arr[]) {
+        int[] numbers = arr;
         insertionSort(arr);
+        selectionSort(numbers);
     }
 
     public static void main(String[] args) {
+        int[] numbers = { 4, 8, 2 };
+        sort(numbers);
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
 
     }
 }
