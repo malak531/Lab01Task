@@ -32,6 +32,10 @@ public class Sorter {
         }
     }
 
+    private static void sort (int arr[]){
+        insertionSort(arr);
+    }
+
     public static void main(String[] args) {
 
     }
